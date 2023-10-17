@@ -12,6 +12,6 @@ message = client.messages.create(
 
 print(message.sid)
 
-//comnentario
+#comentário
 
-//segundo commentario
+#segundo comentário
