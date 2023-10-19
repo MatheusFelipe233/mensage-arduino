@@ -6,12 +6,8 @@ client = Client(account_sid, auth_token)
 
 message = client.messages.create(
   from_='whatsapp:+14155238886',
-  body='Alerta!!! pooooh!!!',
+  body='Cuidado, melhor diminuir o esforço!!!!',
   to='whatsapp:+559295143900'
 )
 
 print(message.sid)
-
-#comentário
-
-#segundo comentário
