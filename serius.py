@@ -9,7 +9,7 @@ while True:
     data = ser.readline().decode().strip()
     if data == "alerta":
         # Navegue até o diretório onde o programa está localizado
-        programa_dir = r'C:\Users\anjos\projetos\mensage-arduino\projetos\testdecomunicacao\test\comunic.py'
+        programa_dir = r'projetos\mensage-arduino\projetos\testdecomunicacao\test\comunic.py'
         os.system('python ' + programa_dir)
         
         # Execute o programa
