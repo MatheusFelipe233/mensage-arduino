@@ -31,12 +31,12 @@ void loop() {
   // Quando algo específico acontecer, envie um sinal
  
   alerta = analogRead(A0);
-  Serial.print("batimento :");
+  
   Serial.println(alerta);
  
-  if (alerta>220) 
+  if (alerta>200) 
   {
-    Serial.print("alerta :");
+    
     Serial.println(alerta);
 
   }

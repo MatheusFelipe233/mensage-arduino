@@ -16,10 +16,10 @@ while True:
 
     print(data)
     
-    if data == "alerta":
+    if data:
           message = client.messages.create(
                 from_='whatsapp:+14155238886',
-                body=("Cuidado, melhor diminuir o esforço!!!!", data),
+                body=(f"Cuidado, melhor diminuir o esforço!!!! \nFrequencia:{data}"),
                 to='whatsapp:+559295143900'
                 )
           print(message.sid)
@@ -29,5 +29,5 @@ while True:
         #os.system('python programa_dir')
         
         # Execute o programa
-    os.system("python comunic.py")
+    #os.system("python comunic.py")
 
