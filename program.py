@@ -16,7 +16,7 @@ cont = 0
 # while cont < NUMERO_REQUISICOES :
 while True:
     frequencia = ser.readline().decode().strip() #frequencia lida no serial do arduino
-    timestamp = f'{time.time()}'  ## para retirar o ponto flutuante
+    timestamp = f'{time.time()}'
 
     print(f'frequencia lida: {frequencia}')
     
