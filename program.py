@@ -29,7 +29,7 @@ while True:
         # faz uma requisição post para o firebase com o link e passando o dado do tipo cardio para o firebase persistir em núvem (guardar)
         requisicao = requests.post(f'{link}/cardio/.json', data=json.dumps(dados))
 
-        print(f'REQUISICAO\n {requisicao}')
+        print(f'REQUISICAO\n {requisicao.status_code}')
 
     time.sleep(2)
     # cont += 1  
