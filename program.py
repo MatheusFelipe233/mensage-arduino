@@ -13,8 +13,10 @@ link = "https://cardio-sensor-default-rtdb.firebaseio.com/"
 ser = serial.Serial('COM4', 9600)  
 
 cont = 0
-while cont < NUMERO_REQUISICOES :
+# while cont < NUMERO_REQUISICOES :
+while True:
     frequencia = ser.readline().decode().strip() #frequencia lida no serial do arduino
+    timestamp = f'{time.time()}'  ## para retirar o ponto flutuante
 
     print(f'frequencia lida: {frequencia}')
     
@@ -22,15 +24,15 @@ while cont < NUMERO_REQUISICOES :
         # Criar uma estrutura do tipo cardio
         dados = {
             'frequencia' : f'{frequencia}',
-            'timestamp' : f'{time.time()}'
+            'timestamp' : timestamp
         }
-        # faz uma requisição POST para o firebase com o link e passando o dado do tipo cardio para o firebase persistir em núvem (guardar)
+        # faz uma requisição post para o firebase com o link e passando o dado do tipo cardio para o firebase persistir em núvem (guardar)
         requisicao = requests.post(f'{link}/cardio/.json', data=json.dumps(dados))
 
         print(f'REQUISICAO\n {requisicao}')
 
     time.sleep(2)
-    cont += 1
+    cont += 1  
 
 """ 
     referencias:
