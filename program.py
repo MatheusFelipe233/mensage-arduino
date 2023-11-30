@@ -3,6 +3,12 @@ import json
 import time
 import serial
 
+from twilio.rest import Client
+
+account_sid = 'AC190a9418d8853a70ae2707247e73aa9b'
+auth_token = 'a5ebdf96775e52ba0bf81c747e9fe9ee'
+client = Client(account_sid, auth_token)
+
 # constante para limitar a quantidade de requisições a serem feitas
 # NUMERO_REQUISICOES = 3
 
@@ -30,6 +36,13 @@ while True:
         requisicao = requests.post(f'{link}/cardio/.json', data=json.dumps(dados))
 
         print(f'REQUISICAO\n {requisicao.status_code}')
+
+        message = client.messages.create(
+                from_='whatsapp:+14155238886',
+                body=(f"Cuidado, melhor diminuir o esforço!!!! \nFrequencia:{frequencia}"),
+                to='whatsapp:+559295143900'
+                )
+        print(message.sid)
 
     time.sleep(2)
     # cont += 1  
