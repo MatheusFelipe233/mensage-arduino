@@ -5,6 +5,7 @@ import serial
 
 from twilio.rest import Client
 
+# chaves usadas para autenticar usuario no twilio, identificação do usuario(account_sid),chave de acesso(auth_token)
 account_sid = 'AC190a9418d8853a70ae2707247e73aa9b'
 auth_token = 'a5ebdf96775e52ba0bf81c747e9fe9ee'
 client = Client(account_sid, auth_token)
@@ -36,16 +37,17 @@ while True:
         requisicao = requests.post(f'{link}/cardio/.json', data=json.dumps(dados))
 
         print(f'REQUISICAO\n {requisicao.status_code}')
-
+        
+        # cria uma menssagem para de um emissor(from) para um destinatario(to), com o corpo da messagem(body)
         message = client.messages.create(
-                from_='whatsapp:+14155238886',
+                from_='whatsapp:+14155238886', 
                 body=(f"Cuidado, melhor diminuir o esforço!!!! \nFrequencia:{frequencia}"),
                 to='whatsapp:+559295143900'
                 )
         print(message.sid)
 
-    time.sleep(2)
-    # cont += 1  
+    time.sleep(1)
+    # cont += 1 
 
 """ 
     referencias:
