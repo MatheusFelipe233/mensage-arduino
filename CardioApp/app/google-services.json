@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "796841708913",
+    "firebase_url": "https://cardio-sensor-default-rtdb.firebaseio.com",
+    "project_id": "cardio-sensor",
+    "storage_bucket": "cardio-sensor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796841708913:android:f7a24747370736ac1ffad0",
+        "android_client_info": {
+          "package_name": "com.example.cardio_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpiQYs6cEDVoLjRn1RKj1AJuvU7E4_7ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
